@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Média Bimestral</title>
+</head>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: rgb(17, 16, 16);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .caixa {
+            background-color: rgb(0, 0, 0);
+            border: 2px solid black;
+            border-radius: 10px;
+            margin-top: 10px;
+            max-width: 500px;
+        }
+
+        .caixa h1 {
+            color: white;
+            text-align: center;
+            margin: 20px 0px;
+            font-size: 1.8em;
+        }
+
+        .caixa p {
+            margin-left: 10px;
+            font-weight: bold;
+            color: crimson;
+            height: 20px;
+        }  
+
+        .caixa input {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 2px;
+            width: 80px;
+            text-align: center;
+        }
+
+        .caixa .btn {
+            width: 50px;
+            font-weight: bold;
+            margin-left: 10px;
+            padding: 2px;
+            border-radius: 10px;
+        }
+
+        .caixa .btn:hover {
+            background-color: rgb(161, 136, 184);
+            cursor: pointer;
+        }
+
+        #res {
+            color: white;
+            margin: 20px 0px 20px 10px;
+        }
+
+        #res strong {
+            color: crimson;
+        }
+
+
+
+
+    </style>
+<body>
+    <div class="caixa">
+        <h1>Calculadora média Bimestral</h1>
+        <p>1º Bimestre: <input type="number" id="pri"></p> <br>
+        <p>2º Bimestre: <input type="number" id="seg"></p> <br>
+        <p>3º Bimestre: <input type="number" id="ter"></p> <br>
+        <p>4º Bimestre: <input type="number" id="qua"><input class="btn" type="button" value="Somar" onclick="somar ()"></p>
+        
+        <div id="res">Resultado</div>
+    </div>
+
+    <script>
+        function somar () {
+            var cal1 = window.document.getElementById('pri')
+            var cal2 = window.document.getElementById('seg')
+            var cal3 = window.document.getElementById('ter')
+            var cal4 = window.document.getElementById('qua')
+            var n1 = Number(pri.value)
+            var n2 = Number(seg.value)
+            var n3 = Number(ter.value)
+            var n4 = Number(qua.value)
+            var calculo = (n1 + n2 + n3 + n4) / 4
+            res.innerHTML = `A média do aluno é: <strong>${calculo}</strong> `
+        }
+    </script>
+
+</body>
+</html>
