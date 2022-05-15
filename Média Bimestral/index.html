@@ -13,7 +13,7 @@
         }
 
         body {
-            background-color: rgb(17, 16, 16);
+            background-color: rgb(87, 79, 79);
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
@@ -22,6 +22,7 @@
             border: 2px solid black;
             border-radius: 10px;
             margin-top: 10px;
+            padding: 10px;
             max-width: 500px;
         }
 
@@ -32,12 +33,23 @@
             font-size: 1.8em;
         }
 
+        .caixa h2 {
+            color: white;
+            font-size: 1em;
+            margin: 20px 0px;
+            text-align: center;
+            font-weight: normal;
+        }
+
         .caixa p {
-            margin-left: 10px;
             font-weight: bold;
             color: crimson;
             height: 20px;
         }  
+
+        strong {
+            color: crimson;
+        }
 
         .caixa input {
             border: 1px solid black;
@@ -56,32 +68,25 @@
         }
 
         .caixa .btn:hover {
-            background-color: rgb(161, 136, 184);
+            background-color: crimson;
             cursor: pointer;
         }
 
         #res {
             color: white;
-            margin: 20px 0px 20px 10px;
+            margin: 20px 0px;
         }
-
-        #res strong {
-            color: crimson;
-        }
-
-
-
-
     </style>
 <body>
     <div class="caixa">
         <h1>Calculadora média Bimestral</h1>
+        <h2>Para aprovação do aluno(a) necessita de uma média acima de <strong>6</strong>.</h2>
         <p>1º Bimestre: <input type="number" id="pri"></p> <br>
         <p>2º Bimestre: <input type="number" id="seg"></p> <br>
         <p>3º Bimestre: <input type="number" id="ter"></p> <br>
         <p>4º Bimestre: <input type="number" id="qua"><input class="btn" type="button" value="Somar" onclick="somar ()"></p>
         
-        <div id="res">Resultado</div>
+        <div id="res">Resultado:</div>
     </div>
 
     <script>
@@ -95,7 +100,12 @@
             var n3 = Number(ter.value)
             var n4 = Number(qua.value)
             var calculo = (n1 + n2 + n3 + n4) / 4
-            res.innerHTML = `A média do aluno é: <strong>${calculo}</strong> `
+            res.innerHTML = `A média do aluno(a) é: <strong>${calculo}</strong> `
+            if (calculo >= 6) {
+                res.innerHTML += `<p>Aluno(a) <strong>APROVADO(A)!!!</strong></p>`
+            } else {
+                res.innerHTML += "<p>Aluno(a) <strong>REPROVADO(A)!!!</strong></p>"
+            }
         }
     </script>
 
