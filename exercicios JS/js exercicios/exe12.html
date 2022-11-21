@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe12</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(95, 57, 57);
+        }
+    </style>
+
+    <script>
+        /* 12) Crie um programa que leia o preço de um produto, calcule e mostre o seu 
+        PREÇO PROMOCIONAL, com 5% de desconto. */
+        
+        var produto = Number(window.prompt("Informe o preço do produto R$:"));
+        var desconto = produto - (produto / 100 * 5) 
+
+        window.alert(`O Produto custa ${produto} reais. Com o desconto de 5% ele ficaria por R$${desconto}`)
+    </script>
+</body>
+
+</html>

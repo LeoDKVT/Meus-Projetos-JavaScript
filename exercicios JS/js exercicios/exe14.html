@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe14</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(95, 57, 57);
+        }
+    </style>
+
+    <script>
+        /* 14) A locadora de carros precisa da sua ajuda para cobrar seus serviços. Escreva 
+        um programa que pergunte a quantidade de Km percorridos por um carro alugado e a 
+        quantidade de dias pelos quais ele foi alugado. Calcule o preço total a pagar, 
+        sabendo que o carro custa R$90 por dia e R$0,20 por Km rodado. */
+
+        var km = Number.parseInt(window.prompt("Informe o Total de Km rodados:"));
+        var dias = Number.parseInt(window.prompt("Informe o total de dias que o carro ficou alugado:"));
+        var total = (km * 0.20) + (dias * 90)
+
+        window.alert(`O carro rodou um total de ${km}km e ficou alugado por ${dias} dias. Deu um total a pagar de ${total} reais`)
+    </script>
+</body>
+
+</html>

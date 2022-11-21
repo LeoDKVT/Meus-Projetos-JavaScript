@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe18</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(95, 57, 57);
+        }
+    </style>
+
+    <script>
+        /* 18) Faça um programa que leia o ano de nascimento de uma pessoa, calcule a idade 
+        dela e depois mostre se ela pode ou não votar. */
+
+        var nascimento = Number.parseInt(window.prompt("Informe seu ano de nascimento:"));
+        var idade = 2022 - nascimento
+
+        if (idade <= 16) {
+            window.alert(`Você tem ${idade} anos. Você Não tem idade suficiente para votar.`);
+        } else if (idade <= 70) {
+            window.alert(`Você tem ${idade} anos. Sua idade é obrigatório a votar.`);
+        } else {
+            window.alert(`Você tem ${idade} anos. Sua escolha de voto é opcional.`)
+        }
+    </script>
+</body>
+
+</html>
