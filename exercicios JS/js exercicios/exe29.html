@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe29</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(95, 57, 57);
+        }
+    </style>
+
+    <script>
+        /* 29) Desenvolva um programa que leia o nome de um funcionário, seu salário, quantos anos 
+        ele trabalha na empresa e mostre seu novo salário, reajustado de acordo com a tabela a seguir: 
+        - Até 2 anos de empresa: aumento de 3% 
+        - entre 3 e 9 anos: aumento de 12.5% 
+        - 10 anos ou mais: aumento de 20%
+        */
+
+        var nome = window.prompt("Informe o nome do funcionário:");
+        var salario = Number(window.prompt("Informe o salário do funcionário:"));
+        var tempoTrabalhado = Number(window.prompt("Informe quantos anos o funcionário já trabalha na empresa:"));
+        var ate2Anos = salario + (salario / 100 * 3)
+        var de3a10Anos = salario + (salario / 100 * 12.5)
+        var de10praMais = salario + (salario / 100 * 20)
+        
+        if (tempoTrabalhado <= 2) {
+            window.alert(`${nome}, seu salário atual é de ${salario}, com o tempo de casa de ${tempoTrabalhado} ano(s). Seu novo salário agora será de ${ate2Anos} reais...`);
+        } else if (tempoTrabalhado <= 9) {
+            window.alert(`${nome}, seu salário atual é de ${salario}, com o tempo de casa de ${tempoTrabalhado} ano(s). Seu novo salário agora será de ${de3a10Anos} reais.`);
+        } else {
+            window.alert(`${nome}, seu salário atual é de ${salario}, com o tempo de casa de ${tempoTrabalhado} ano(s). Seu novo salário agora será de ${de10praMais} reais.`);
+        }
+    </script>
+</body>
+
+</html>
