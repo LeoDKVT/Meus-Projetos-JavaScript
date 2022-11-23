@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe22</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(95, 57, 57);
+        }
+    </style>
+
+    <script>
+        /* 22) Escreva um programa que leia o ano de nascimento de um rapaz e mostre a sua 
+        situação em relação ao alistamento militar.
+        - Se estiver antes dos 18 anos, mostre em quantos anos faltam para o 
+        alistamento.
+        - Se já tiver depois dos 18 anos, mostre quantos anos já se passaram do 
+        alistamento.
+        */
+
+        var nascimento = Number.parseInt(window.prompt("Informe seu ano de nascimento:"));
+        var idade = 2022 - nascimento 
+        var faltaAlistamento = 18 - idade 
+        var passouAlistamento = idade - 18
+
+        if (idade < 18) {
+            window.prompt(`Você tem ${idade} anos. Falta ${faltaAlistamento} anos para realizar o alistamento.`);
+        } else {
+            window.prompt(`Você tem ${idade} anos. Já se passaram ${passouAlistamento} anos do alistamento.`)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe26</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(95, 57, 57);
+        }
+    </style>
+
+    <script>
+        /* 26) Escreva um algoritmo que leia dois números inteiros e compare-os, mostrando na tela uma das mensagens abaixo: 
+        - O primeiro valor é o maior 
+        - O segundo valor é o maior 
+        - Não existe valor maior, os dois são iguais
+        */
+
+        var n1 = Number.parseInt(window.prompt("Informe p primeiro número:"));
+        var n2 = Number.parseInt(window.prompt("Informe o segundo valor:"));
+
+        if (n1 > n2) {
+            window.alert("O Primeiro valor é maior.");
+        } else if (n2 > n1) {
+            window.alert("O Segundo valor é maior.");
+        } else {
+            window.alert("Os dois valores são iguais.");
+        }
+    </script>
+</body>
+
+</html>

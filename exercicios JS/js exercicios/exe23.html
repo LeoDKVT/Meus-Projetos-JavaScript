@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe23</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(95, 57, 57);
+        }
+    </style>
+
+    <script>
+        /* 23) Numa promoção exclusiva para o Dia da Mulher, uma loja quer dar descontos para todos, mas especialmente 
+        para mulheres. Faça um programa que leia nome, sexo e o valor das compras do cliente e calcule o preço 
+        com desconto. Sabendo que: - Homens ganham 5% de desconto - Mulheres ganham 13% de desconto.
+        */
+
+        var nome = window.prompt("Informe o seu nome:");
+        var sexo = window.prompt("Qual seu sexo? (m) Masculino ou (f) Feminino");
+        var preço = Number(window.prompt("Informe o preço da compra:"));
+        var totalM = preço - (preço / 100 * 5)
+        var totalF = preço - (preço / 100 * 13)
+        if (sexo == 'm') {
+            window.prompt(`${nome}, você tem 5% de desconto. O total a pagar é de R$${totalM} reais.`);
+        } else {
+            window.prompt(`${nome}, você tem 13% de desconto.O total a pagar é de R$${totalF} reais.`);
+        }
+    </script>
+</body>
+
+</html>

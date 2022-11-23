@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe24</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(95, 57, 57);
+        }
+    </style>
+
+    <script>
+        /* 24) Faça um algoritmo que pergunte a distância que um passageiro deseja percorrer em Km. 
+        Calcule o preço da passagem, cobrando R$0.50 por Km para viagens até 200Km e R$0.45 para viagens mais longas.
+        */
+
+        var distancia = Number.parseInt(window.prompt("Informe a distancia que pretende percorrer:"));
+        var menorKm = distancia * 0.50
+        var maiorKm = distancia * 0.45
+
+        if (distancia <= 200) {
+            window.alert(`Sua distancia que você pretende percorrer é de ${distancia}. Total a pagar no valor de ${menorKm} reais`);
+        } else {
+            window.alert(`Sua distancia que você pretende percorrer é de ${distancia}. Total a pagar no valor de ${maiorKm} reais`);
+        }
+    </script>
+</body>
+
+</html>
